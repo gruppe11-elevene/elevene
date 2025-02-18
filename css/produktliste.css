@@ -124,3 +124,20 @@ h1,
   transform: rotate(45deg); /* Diagonal boks */
   z-index: 0;
 }
+
+/* ny pris (rabat + udstregning af gammel pris)*/
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.new-price {
+  color: #e57373;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.regular-price {
+  color: black;
+}

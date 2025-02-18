@@ -10,6 +10,24 @@ img {
   display: block;
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: "Montserrat", serif;
+  font-weight: 130;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
 /* SKAL SLETTES NÅR GENERAL.CSS ER LAVET*/
 main {
   margin: 2rem;
@@ -66,13 +84,12 @@ h1,
   background-color: white;
   color: black;
   border: 2px solid black;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 10px;
-  align-self: start;
   text-align: center;
   text-decoration: none;
 }
@@ -134,10 +151,38 @@ h1,
 
 .new-price {
   color: #e57373;
-  font-weight: bold;
+
   font-size: 1rem;
 }
 
 .regular-price {
   color: black;
 }
+
+/* rating */
+.product-rating {
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  gap: 2px;
+}
+
+/* drop down */
+
+#categoryFilter {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 5px; /* Lidt afrundede hjørner */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+/* Hover-effekt */
+#categoryFilter:hover {
+  background-color: #f0f0f0; /* Let grå baggrund ved hover */
+}
+
+/* add to cart */

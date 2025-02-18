@@ -73,6 +73,8 @@ h1,
   transition: all 0.3s ease;
   margin: 10px;
   align-self: start;
+  text-align: center;
+  text-decoration: none;
 }
 
 .view-more:hover {

@@ -28,7 +28,7 @@ function showProductList(products) {
         </div>`
            : ""
        }
-          <button class="view-more">View More</button>
+           <a class="view-more" href="product.html?id=${product.id}">View More</a>
           
       </div>
       `

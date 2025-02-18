@@ -10,15 +10,53 @@
     <link rel="stylesheet" href="./css/produktliste.css">
     <script src="./js/general.js" defer></script>
     <script src="./js/produktliste.js" defer></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header></header>
+
+    <header>
+
+
+        <div class="logo">
+            <a href="frontpage.html">
+                <img src="Pics/elevene-logo-pic.webp" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="frontpage.html" class="nav-link">HOME</a></li>
+                <li><a href="aboutme.html" class="nav-link ">ABOUT ME</a></li>
+                <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+
+            </div>
+
+        </nav>
+    </header>
+
     <main>
-        <h1>Overskrift</h1>
-        <p class="site_description">Tekst omkring siden</p>
+        <h1>Products</h1>
+        <h2 class="site_description">Explore our finest lines of beauty-products</h2>
 
         <div class="line"></div>
+
+
+        <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="beauty">Beauty</option>
+            <option value="fragrances">Fragrances</option>
+        </select>
+
+
 
         <div class="product_list_container">
 

@@ -14,9 +14,9 @@ function showProductList(products) {
         `   
       <div class="card">
           <img src="${product.thumbnail}" alt="${product.title}">
-          <h2 class="item">${product.title}</h2>
+          <h3 class="item">${product.title}</h3>
           <div class="item">${product.brand}</div>
-          <div class="item">${product.description}</div>
+          <div class="item">${product.tags}</div>
           <div class="item">Pris: ${product.price} kr.</div>
           <div class="item">Rating: ${product.rating} ⭐</div>
 
@@ -28,7 +28,7 @@ function showProductList(products) {
         </div>`
            : ""
        }
-          <button class="view-more">View More</button>
+       <a class="view-more" href="product.html?id=${product.id}">View More</a>
           
       </div>
       `

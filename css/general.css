@@ -46,6 +46,4 @@ body {
 h1 {
   font-family: var(--heading-font);
   font-size: var(--h1-mobile-size);
-  margin: 3rem;
-  text-align: center;
 }

@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f7f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.product_card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Billed-container */
+.product_image_container {
+  width: 100%;
+}
+
+.product_image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Produktinfo */
+.product_info {
+  padding: 10px;
+}
+
+/* Styling */
+.product-brand {
+  font-weight: bold;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #444;
+}
+
+.product-rating {
+  margin: 10px 0;
+}
+
+/* Knap */
+.buy-button {
+  background: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background: #003f80;
+}
+
+/* === Desktop layout === */
+@media (min-width: 768px) {
+  .product_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .product_info {
+    padding-left: 20px;
+  }
+}

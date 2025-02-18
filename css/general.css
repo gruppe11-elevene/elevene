@@ -1,0 +1,51 @@
+/**** Main variables ****/
+
+/*
+#7A5959 - Brown
+#5B1E26 - dark red/brown
+#FAF8F5 - eggshell white
+#F4E1D2 - beige
+#C8D4E0 - baby blue
+#215D99 - royal blue
+
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+    font-size: 1rem;
+  font-weight: 130;
+  font-style: normal;
+}
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: normal;
+}
+*/
+
+:root {
+  --primary-font: "Montserrat", serif;
+  --heading-font: "Playfair Display", serif;
+  --text-color: #000000;
+  --background-color: #faf8f5;
+
+  --h1-desktop-size: 4rem;
+  --h1-mobile-size: 3rem;
+  --p-size: 1rem;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: var(--h1-mobile-size);
+  margin: 3rem;
+  text-align: center;
+}

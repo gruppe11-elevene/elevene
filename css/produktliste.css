@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SKAL SLETTES NÅR GENERAL.CSS ER LAVET*/
+main {
+  margin: 2rem;
+}
+
+h1,
+.site_description {
+  text-align: center;
+}
+
+/* linje */
+.line {
+  width: 100%; /* Gør linjen kortere for et pænt look */
+  height: 1px;
+  background: black;
+  margin: 10px auto; /* Centrerer linjen */
+  border-radius: 5px; /* Gør kanterne blødere */
+  margin-bottom: 2rem;
+}
+
+/* Opsætning af grid container til "cards" */
+.product_list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* styling af cards */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: grid;
+  grid-template-rows: subgrid; /* Arver rækker fra .container */
+  grid-row: span 7; /* Strækker sig over flere rækker */
+  border: 1px solid #ddd;
+  position: relative; /* Sørger for at ribbonen er over kortet */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Styling af knap */
+.view-more {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+  align-self: start;
+}
+
+.view-more:hover {
+  background-color: black;
+  color: white;
+}
+
+/* discount */
+.discount {
+  position: absolute;
+  top: 8px; /* Justeret lidt tættere på hjørnet */
+  right: 8px; /* Justeret lidt tættere på hjørnet */
+  background: #e57373;
+  color: #fff;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px; /* Mindre fontstørrelse */
+  line-height: 20px; /* Justeret linjehøjde */
+  text-align: center;
+  padding: 0 12px; /* Mindre padding */
+  border-radius: 3px; /* Små, blødere hjørner */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Mindre skygge for subtilitet */
+  z-index: 2; /* Sørger for at discounten vises ovenpå */
+}
+
+.discount:before {
+  content: "";
+  width: 6px; /* Mindre cirkel */
+  height: 6px; /* Mindre cirkel */
+  background: #fff;
+  position: absolute;
+  top: 7px; /* Justeret position for at matche den mindre boks */
+  left: 0;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.discount:after {
+  content: " ";
+  height: 16px; /* Mindre diagonale boks */
+  width: 16px;
+  background: #e57373;
+  position: absolute;
+  top: 2px;
+  left: -7px;
+  border-radius: 3px;
+  transform: rotate(45deg); /* Diagonal boks */
+  z-index: 0;
+}

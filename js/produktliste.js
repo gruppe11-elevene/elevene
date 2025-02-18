@@ -16,9 +16,21 @@ function showProductList(products) {
           <img src="${product.thumbnail}" alt="${product.title}">
           <h2 class="item">${product.title}</h2>
           <div class="item">${product.brand}</div>
-          <div class="item">${product.description}</div>
-          <div class="item">Pris: ${product.price} kr.</div>
+
+          <div class="item price">
+  ${
+    product.discountPercentage > 0
+      ? `<span class="old-price">${product.price} EUR</span> 
+         <span class="new-price">
+           ${Math.round(product.price * (1 - product.discountPercentage / 100))} EUR
+         </span>`
+      : `<span class="regular-price">${product.price} EUR</span>`
+  }
+</div>
+          
+       
           <div class="item">Rating: ${product.rating} ⭐</div>
+
 
        ${
          product.discountPercentage > 0
@@ -28,7 +40,7 @@ function showProductList(products) {
         </div>`
            : ""
        }
-           <a class="view-more" href="product.html?id=${product.id}">View More</a>
+           <a class="view-more" href="produkt.html?id=${product.id}">View More</a>
           
       </div>
       `

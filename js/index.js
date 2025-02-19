@@ -1,27 +1,28 @@
 let knapper = document.querySelector(".knapper");
 
-fetch(`https://dummyjson.com/products`)
-  .then((response) => response.json())
-  .then((data) => showList(data.products)); // Access the correct array
+// Definer de kategorier, vi vil vise, og deres billeder
+const categories = [
+  { name: "all", displayName: "All Products", image: "Pics/Gallery-pic-4.webp" },
+  { name: "beauty", displayName: "Beauty", image: "Pics/Gallery-pic-2.webp" },
+  { name: "fragrances", displayName: "Fragrances", image: "Pics/Gallery-pic-5.webp" },
+];
 
-function showList(categories) {
-  console.log(categories);
-
-  // Option 1: Pick the first 3 categories
-  const selectedCategories = categories.slice(0, 3);
-
-  const markup = selectedCategories
+// Funktion til at vise kategorierne
+function showList() {
+  const markup = categories
     .map(
       (category) => `
-            <div class="knap">
-                <a href="produktliste.html?category=${category.category}">
-                    ${category.category}
-                </a>
-            </div>
-        `
+        <div class="knap" style="background-image: url('${category.image}')">
+            <a href="produktliste.html?category=${category.name}">
+                ${category.displayName}
+            </a>
+        </div>
+      `
     )
     .join("");
 
-  console.log(markup);
   knapper.innerHTML = markup;
 }
+
+// Kald funktionen for at vise knapperne
+showList();

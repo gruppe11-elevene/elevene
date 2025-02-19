@@ -10,8 +10,11 @@ img {
   display: block;
 }
 
-h1 {
-  margin-bottom: 2rem;
+.productlist_h1 {
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -19,6 +22,8 @@ h2 {
   font-weight: 130;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  color: black;
+  text-transform: none;
 }
 
 h3 {
@@ -30,7 +35,8 @@ h3 {
 
 /* SKAL SLETTES NÅR GENERAL.CSS ER LAVET*/
 main {
-  margin: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 h1,
@@ -95,7 +101,7 @@ h1,
 }
 
 .view-more:hover {
-  background-color: black;
+  background-color: #5b1e26;
   color: white;
 }
 
@@ -104,7 +110,7 @@ h1,
   position: absolute;
   top: 8px; /* Justeret lidt tættere på hjørnet */
   right: 8px; /* Justeret lidt tættere på hjørnet */
-  background: #e57373;
+  background: #dd5959;
   color: #fff;
   font-family: helvetica, sans-serif;
   font-weight: bold;
@@ -133,7 +139,7 @@ h1,
   content: " ";
   height: 16px; /* Mindre diagonale boks */
   width: 16px;
-  background: #e57373;
+  background: #dd5959;
   position: absolute;
   top: 2px;
   left: -7px;
@@ -150,7 +156,7 @@ h1,
 }
 
 .new-price {
-  color: #e57373;
+  color: #dd5959;
 
   font-size: 1rem;
 }

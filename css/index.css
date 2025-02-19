@@ -74,6 +74,7 @@ p {
 .pic-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-bottom: 6rem;
 }
 
 .pic_1,

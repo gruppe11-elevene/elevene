@@ -60,9 +60,12 @@ function showProductList(products) {
         <div class="item product-rating">
           ${"⭐".repeat(Math.round(product.rating)) + "☆".repeat(5 - Math.round(product.rating))} (${product.reviews.length})
         </div>
+       
         ${product.discountPercentage > 0 ? `<div class="discount">On Sale</div>` : ""}
         <a class="view-more" href="produkt.html?id=${product.id}">View More</a>
+
       </div>
+       
     `
     )
     .join("");

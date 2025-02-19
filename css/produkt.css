@@ -1,11 +1,24 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #f9f7f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Sørger for at siden fylder hele skærmen */
+  margin: 0;
+}
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+h2 {
+  margin-bottom: 1.2rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
 }
 
 .product_card {
@@ -13,7 +26,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -37,11 +50,34 @@ body {
 /* Styling */
 .product-brand {
   font-weight: bold;
+  color: #444;
 }
 
 .product-price {
   font-weight: bold;
   color: #444;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.new-price {
+  color: #d9534f; /* Rød farve */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.discount {
+  background-color: #d9534f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .product-rating {
@@ -50,7 +86,7 @@ body {
 
 /* Knap */
 .buy-button {
-  background: #0056b3;
+  background: #588bb0;
   color: white;
   border: none;
   padding: 10px;
@@ -67,11 +103,22 @@ body {
   .product_card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 600px;
+    width: 800px;
+    max-width: 1000px;
     text-align: left;
   }
 
   .product_info {
     padding-left: 20px;
+  }
+
+  .buy-button {
+    margin-top: 1.2rem;
+  }
+
+  .forside_h1 {
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 5rem;
   }
 }

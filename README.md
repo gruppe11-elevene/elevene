@@ -52,34 +52,35 @@ Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktu
 
 # Funktionalitet
 
-Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
+Vi har arbejdet med følgende:
 
 - Hentning af produkter fra API.
 - Filtrering af produkter baseret på brugerens valg.
 - Dynamisk visning af produkter i HTML.
 
-Brug korte beskrivelser, som i eksemplerne herover
-
 # API endpoints
-
-Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
 - (fx. https://dummyjson.com/products)
 
 # Dokumentation af Funktion
 
-Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
+Beskrivelse:
+Funktionen showProductList viser en liste af produkter på websiden. Den tager en liste af produkter som input og genererer HTML for hvert produkt, som derefter indsættes i en container på siden. Funktionen viser produktinformation som billede, navn, brand, pris, vurdering og antal anmeldelser.
 
-- Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
-- Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
-- Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
-- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
+Parametre:
+products (Array): En liste med produktdata, hvor hvert produkt indeholder oplysninger som navn, pris, billede, brand, vurdering og anmeldelser.
+Returnerer:
+Funktionen returnerer ikke noget, men ændrer indholdet på websiden ved at tilføje HTML for produkterne i en bestemt container.
 
-```javascript
-//funktionens kode:
-function voresFunktion(sprog) {
-  console.log(`${sprog} syntax highlighting`);
+Eksempel:
+
+// Funktionens kode:
+function showProductList(products) {
+// Genererer HTML for hvert produkt
+// og indsætter det i produktcontaineren
 }
-//hvordan funktionen kaldes:
-voresFunktion("JavaScript");
-```
+
+// Hvordan funktionen kaldes:
+showProductList(products);
+
+I eksemplet ovenfor kalder vi showProductList med en liste af produkter. Funktionen genererer HTML for hvert produkt og viser det på websiden.

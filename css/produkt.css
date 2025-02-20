@@ -35,6 +35,7 @@ p {
 /* Billed-container */
 .product_image_container {
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .product_image {
@@ -98,6 +99,34 @@ p {
   background: #003f80;
 }
 
+/* review-container */
+.reviews-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 kolonne til mobil */
+  gap: 10px;
+}
+
+.review-column {
+  display: grid;
+  grid-template-rows: subgrid; /* Arver rækker fra .reviews-container */
+  grid-row: span 4; /* Sikrer at alle kolonner har samme højde */
+  width: 100%; /* Sørger for, at kolonnerne fylder hele bredden */
+  gap: 10px;
+}
+
+.review-column h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.review-column p {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: left;
+}
+
 /* === Desktop layout === */
 @media (min-width: 768px) {
   .product_card {
@@ -120,5 +149,21 @@ p {
     text-align: center;
     padding-top: 4rem;
     font-size: 5rem;
+  }
+  /* review-container */
+  .reviews-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner på desktop */
+  }
+
+  .review-column {
+    width: 100%; /* Kolonnerne fylder stadig hele bredden */
+  }
+
+  .review-column h4 {
+    font-size: 18px; /* Juster fontstørrelsen for større skærme */
+  }
+
+  .review-column p {
+    font-size: 16px; /* Juster fontstørrelsen for større skærme */
   }
 }

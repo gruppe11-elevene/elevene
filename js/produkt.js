@@ -46,6 +46,22 @@ function showProduct(data) {
 
         <button class="buy-button">Buy Now</button>
     </div>
+
+    <h3>Customer Reviews</h3>
+    <div class="reviews-container">
+      <div class="review-column">
+        <h4>Name</h4>
+        ${data.reviews.map((review) => `<p>${review.reviewerName}</p>`).join("")}
+      </div>
+      <div class="review-column">
+        <h4>Rating</h4>
+        ${data.reviews.map((review) => `<p>${"⭐".repeat(review.rating) + "☆".repeat(5 - review.rating)}</p>`).join("")}
+      </div>
+      <div class="review-column">
+        <h4>Comment</h4>
+        ${data.reviews.map((review) => `<p>"${review.comment}"</p>`).join("")}
+      </div>
+    </div>
   `;
 
   // Indsætter produktet i HTML-containeren
